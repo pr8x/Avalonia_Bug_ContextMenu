@@ -1,0 +1,31 @@
+﻿<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="clr-namespace:Avalonia_Bug_ContextMenu.ViewModels;assembly=Avalonia_Bug_ContextMenu"
+        xmlns:local="clr-namespace:Avalonia_Bug_ContextMenu;assembly=Avalonia_Bug_ContextMenu"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="Avalonia_Bug_ContextMenu.Views.MainWindow"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="Avalonia_Bug_ContextMenu">
+
+    <Design.DataContext>
+        <vm:MainWindowViewModel/>
+    </Design.DataContext>
+
+    <Rectangle Fill="Red" Width="200" Height="200">
+      <Rectangle.ContextMenu>
+        <local:CustomContextMenu>
+          <MenuItem>
+            TEst
+          </MenuItem>
+          <MenuItem>
+            TEst
+          </MenuItem>
+          <MenuItem>
+            TEst
+          </MenuItem>
+        </local:CustomContextMenu>
+      </Rectangle.ContextMenu>
+    </Rectangle>
+</Window>
